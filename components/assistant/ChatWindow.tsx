@@ -56,7 +56,7 @@ export default function ChatWindow({ suggestedQuestionTrigger }: Props) {
       if (!res.ok) throw new Error(data.error || "Error desconocido");
 
       setMessages([...updatedMessages, { role: "assistant", content: data.reply }]);
-    } catch (err) {
+    } catch (_err) {
       setError("No se pudo obtener respuesta. Verifica tu conexión e intenta de nuevo.");
     } finally {
       setLoading(false);

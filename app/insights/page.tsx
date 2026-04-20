@@ -43,7 +43,7 @@ export default function InsightsPage() {
 
       setAnalysis(json.analysis);
       setView("result");
-    } catch (err) {
+    } catch (_err) {
       setError("No se pudo generar el análisis. Verifica tu conexión e intenta de nuevo.");
     } finally {
       setLoading(false);
